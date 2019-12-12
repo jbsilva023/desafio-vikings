@@ -85,14 +85,13 @@ fieldset {
 }
 
 legend {
+    position: relative;
     font-size:16px;
     font-weight:lighter;
     margin-bottom: 0px;
-    width: 6%;
-    /*border: 1px solid #ddd;*/
-    /*border-radius: 4px;*/
+    width: 55px;
     padding: 5px 5px 5px 10px;
-    /*background-color: #ffffff;*/
+    background-color: #ffffff;
 }
 
 nav {

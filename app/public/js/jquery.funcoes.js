@@ -8,7 +8,7 @@ $(function ($) {
     /* Evento que controle o submenu lateral, será exibido no momento do click
      * no dropdown-item dropdown-toggle
      */
-    $('.dropdown-menu a.dropdown-toggle').on('click', function (e) {
+    $('.dropdown-menu a.dropdown-toggle').on('click mouseover', function (e) {
         if (!$(this).next().hasClass('show')) {
             $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
         }
