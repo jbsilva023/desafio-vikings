@@ -47,8 +47,8 @@
                 </div>
             </div>
             <div class="col-md-6 col-sm-12">
-                <label for="telefone">Telefone: <span class="text-danger">*</span></label>
-                <input type="text" name="telefone" id="telefone" class="phone form-control required"
+                <label for="telefone">Telefone: </label>
+                <input type="text" name="telefone" id="telefone" class="phone form-control"
                        value="">
             </div>
             <div class="col-md-6 col-sm-12">

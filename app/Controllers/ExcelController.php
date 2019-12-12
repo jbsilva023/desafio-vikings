@@ -107,7 +107,7 @@ class ExcelController extends Controller
 
                 return [
                     'title' => 'Sucesso!',
-                    'msg' => 'Registro importados com sucesso.',
+                    'msg' => 'Registro(s) importado(s) com sucesso.',
                     'type' => 'success',
                     'reload' => true
                 ];

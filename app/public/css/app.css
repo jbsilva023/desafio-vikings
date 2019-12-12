@@ -74,24 +74,13 @@ div.card>div.card-body {
     padding:1rem 1.5rem;
 }
 
-fieldset {
-    border: 1px solid #ddd !important;
-    margin: 0;
-    xmin-width: 0;
-    padding: 10px;
-    position: relative;
-    border-radius:4px;
-    /*background-color: #F8F8F8;*/
+.w-auto {
+    width: auto !important;
 }
 
 legend {
-    position: relative;
-    font-size:16px;
-    font-weight:lighter;
-    margin-bottom: 0px;
-    width: 55px;
-    padding: 5px 5px 5px 10px;
-    background-color: #ffffff;
+    padding: 5px;
+    font-size: 16px;
 }
 
 nav {
