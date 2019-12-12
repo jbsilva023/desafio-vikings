@@ -24,7 +24,6 @@
                     {{($filtro?'style=display:block':'style=display:none')}}>
                 @include('app.form-filtro-cartorio')
             </div>
-
             <div class="card-body">
                 <div class="preload"></div>
                 @include('app.cartorio-historioco')
@@ -46,8 +45,8 @@
                     <div class="form"></div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                    <button type="submit" class="btn btn-success save">Salvar</button>
+                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="submit" class="btn btn-outline-success save">Salvar</button>
                 </div>
             </div>
         </div>
@@ -66,8 +65,8 @@
                     <div class="form"></div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                    <button type="submit" class="btn btn-success save">Salvar</button>
+                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="submit" class="btn btn-outline-success save">Salvar</button>
                 </div>
             </div>
         </div>

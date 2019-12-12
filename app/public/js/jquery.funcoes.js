@@ -55,7 +55,7 @@ $(function ($) {
             $(this).val('');
         });
 
-        card.find('div.card-filter').slideUp('fast', function (e) {
+        card.find('div.card-filter').slideUp('slow', function (e) {
             $(this).removeClass('active');
         });
 

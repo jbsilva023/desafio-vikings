@@ -20,10 +20,10 @@
                     <input type="hidden" name="tipo_arquivo" value="excel">
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-12">
-                            <label class="file-upload btn btn-primary mt-2">
+                            <label class="file-upload btn btn-outline-primary mt-2">
                                 Upload Excel <input type="file" name="arquivo" id="arquivo"/>
                             </label>
-                            <input type="submit" class="btn btn-success" vlaue="enviar">
+                            <input type="submit" class="btn btn-outline-success" vlaue="enviar">
                         </div>
                     </div>
                 </form>
