@@ -21,7 +21,9 @@ class CartorioController extends Controller
 
     public function index()
     {
-        $page = $_GET['page'] ?? 1;
+        $page = $_REQUEST['page'] ?? 1;
+        unset($_REQUEST['page']);
+
         $num_registers = $_REQUEST['num_registers'] ?? 10;
         $filtro = count(array_filter($_REQUEST, 'strlen')) ? true : false;
         $conditions = [];
@@ -41,6 +43,7 @@ class CartorioController extends Controller
 
         $cartorio = new Cartorios;
         $cartorios = $cartorio->paginate($num_registers, $page, ['id', 'DESC'], $conditions);
+
         $args = [
             'cartorios' => $cartorios['data'],
             'paginator' => $cartorios['paginator'],
@@ -53,11 +56,18 @@ class CartorioController extends Controller
     public function show()
     {
         $id = $_POST['id'];
+
         $cartorio = new Cartorios;
         $cartorio = $cartorio->find($id);
+
         $ufs = $this->getProviderDataUfs();
 
-        return $this->view('app.form-update-cartorio', ['cartorio' => $cartorio, 'ufs' => $ufs]);
+        $args = [
+            'cartorio' => $cartorio,
+            'ufs' => $ufs
+        ];
+
+        return $this->view('app.form-update-cartorio', $args);
     }
 
     protected function getProviderDataUfs(): array
@@ -97,7 +107,9 @@ class CartorioController extends Controller
     public function create()
     {
         $ufs = $this->getProviderDataUfs();
-        return $this->view('app.form-novo-cartorio', ['ufs' => $ufs]);
+        $args = ['ufs' => $ufs];
+
+        return $this->view('app.form-novo-cartorio', $args);
     }
 
     public function store()

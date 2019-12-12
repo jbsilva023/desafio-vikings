@@ -1,7 +1,6 @@
 <form action="/inicio#cartorios" name="form-filtro" method="POST">
-
-    <fieldset>
-        <legend>Filtro</legend>
+    <fieldset class="border p-2">
+        <legend class="w-auto">Filtro</legend>
         <div class="form-group">
             <div class="row">
                 <div class="col-md-4 col-sm-12">
