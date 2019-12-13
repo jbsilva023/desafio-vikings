@@ -38,7 +38,7 @@
                     </div>
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-12">
-                            <label class="file-upload btn btn-primary mt-2">
+                            <label class="file-upload btn btn-outline-primary mt-2">
                                 Anexar <input type="file" name="arquivo" id="arquivo"/>
                             </label>
                         </div>
@@ -46,8 +46,8 @@
                     <div class="col mt-4">
                         <div class="form-group float-right">
                             <div class="col-sm-offset-2 col-sm-12">
-                                <button type="submit" class="btn btn-success">Enviar</button>
-                                <button type="reset" class="btn btn-primary">Limpar</button>
+                                <button type="reset" class="btn btn-outline-danger">Limpar</button>
+                                <button type="submit" class="btn btn-outline-success">Enviar</button>
                             </div>
                         </div>
                     </div>
