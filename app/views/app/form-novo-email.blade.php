@@ -59,7 +59,6 @@
 
 @section('scripts')
     <script src="https://cdn.ckeditor.com/ckeditor5/15.0.0/classic/ckeditor.js"></script>
-    {{--<script src="https://cdn.ckeditor.com/4.13.0/standard/ckeditor.js"></script>--}}
     <script src="/app/public/js/jquery.funcoes.file-upload.js"></script>
     <script src="/app/public/js/app/jquery.funcoes.cartorio.js"></script>
     <script type="text/javascript">

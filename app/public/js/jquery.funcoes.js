@@ -51,8 +51,8 @@ $(function ($) {
         let form = $(this).closest('form');
         let card = $(this).closest('.card');
 
-        form.find('input, select').each(function () {
-            $(this).val('');
+        form.find('input, select, textarea, file').each(function () {
+            $(this).val('').html('');
         });
 
         card.find('div.card-filter').slideUp('slow', function (e) {
