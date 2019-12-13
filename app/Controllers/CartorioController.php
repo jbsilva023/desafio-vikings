@@ -266,6 +266,7 @@ class CartorioController extends Controller
             $mail->Username = getenv('MAIL_USERNAME');  // SMTP username
             $mail->Password = getenv('MAIL_PASSWORD');  // SMTP password
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;   // Enable TLS encryption
+            $mail->CharSet = PHPMailer::CHARSET_UTF8;
             $mail->Port = getenv('MAIL_PORT');          // TCP port to connect to
 
             //Recipients
@@ -283,12 +284,14 @@ class CartorioController extends Controller
             $mail->Body = $_POST['mensagem'];
             //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
-            if (count($cartorios) > 0) {
-                foreach ($cartorios as $cartorio) {
-                    $mail->clearAddresses();
-                    $mail->addAddress($cartorio->email, $cartorio->nome);     // Add a recipient
-                    $mail->send();
-                }
+            if (!count($cartorios) > 0) {
+                throw new \Exception('Não foi possível localizar registros para envio de e-mails');
+            }
+
+            foreach ($cartorios as $cartorio) {
+                $mail->clearAddresses();
+                $mail->addAddress($cartorio->email, $cartorio->nome);     // Add a recipient
+                $mail->send();
             }
 
             //$mail->addAddress('ellen@example.com');               // Name is optional
@@ -302,10 +305,12 @@ class CartorioController extends Controller
                 'type' => 'success',
                 'reload' => true
             ];
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
+            $error = $mail->ErrorInfo ?: $e->getMessage();
+
             return [
-                'title' => "Error!",
-                'msg' => "Não foi possível enviar o(s) e-mail(s).<br/><b>Erro:</b> {$mail->ErrorInfo}",
+                'title' => "Erro!",
+                'msg' => "Não foi possível enviar o(s) e-mail(s).<br/><b>Erro:</b> {$error}",
                 'type' => "error",
                 'reload' => false
             ];
