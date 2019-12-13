@@ -29,8 +29,8 @@
             </div>
             <div class="col-md-6 col-sm-12">
                 <div class="form-group">
-                    <label for="email">E-mail: <span class="text-danger">*</span></label>
-                    <input type="email" name="email" id="email" class="form-control required"
+                    <label for="email">E-mail: </label>
+                    <input type="email" name="email" id="email" class="form-control"
                            value="{{ $cartorio->email }}">
                 </div>
             </div>
@@ -53,8 +53,8 @@
             </div>
             <div class="col-md-6 col-sm-12">
                 <div class="form-group">
-                    <label for="telefone">Telefone: <span class="text-danger">*</span></label>
-                    <input type="text" name="telefone" id="telefone" class="phone form-control required"
+                    <label for="telefone">Telefone: </label>
+                    <input type="text" name="telefone" id="telefone" class="phone form-control"
                            value="{{ $cartorio->telefone }}">
                 </div>
             </div>
